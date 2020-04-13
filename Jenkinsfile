@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'service nginx restart'
+                echo 'service nginx restart'
             }
         }
     }
