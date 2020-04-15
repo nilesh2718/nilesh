@@ -4,7 +4,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'service nginx restart'
-                sh 'java --version'
+                cmd 'java --version'
             }
         }
     }
