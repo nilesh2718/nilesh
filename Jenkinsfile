@@ -19,17 +19,14 @@ pipeline {
                  }
                  }
     stage('two') {
-                steps{
-               echo'Running two steps at same time using (parallel)'
-                      }
 
             parallel{
 
                 stage('p1') {
-                 steps { echo'parllel stage 1'}
+                 steps { echo'Running two steps at same time P1}
                       }
                 stage('p2') {
-                 steps { echo'parllel stage 2'}
+                 steps { echo'Running two steps at same time P2'}
                       }
                     }    
         }
