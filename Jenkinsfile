@@ -19,7 +19,10 @@ pipeline {
                  }
                  }
     stage('two') {
+                steps{
                echo'Running two steps at same time using (parallel)'
+                      }
+
             parallel{
 
                 stage('p1') {
