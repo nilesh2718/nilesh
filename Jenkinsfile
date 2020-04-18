@@ -23,7 +23,7 @@ pipeline {
             parallel{
 
                 stage('p1') {
-                 steps { echo'Running two steps at same time P1}
+                 steps { echo'Running two steps at same time P1'}
                       }
                 stage('p2') {
                  steps { echo'Running two steps at same time P2'}
