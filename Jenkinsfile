@@ -1,14 +1,27 @@
 pipeline {
+
    agent any
   
    stages {
-        stage('One') {
+
+    stage("Env Variables") {
+            steps {
+              echo 'Testing environment veriables'
+
+                sh "printenv"
+            }
+        }
+    stage('Input step') {
                  steps {
-                     input('this is nilesh devops engineer .will you like to start devlopmen')
+
+                  echo'Testing human input authorization (input)'
+                  input('this is nilesh devops engineer .will you like to start devlopmen')
                  }
                  }
-        stage('two') {
+    stage('two') {
+               echo'Running two steps at same time using (parallel)'
             parallel{
+
                 stage('p1') {
                  steps { echo'parllel stage 1'}
                       }
@@ -17,7 +30,7 @@ pipeline {
                       }
                     }    
         }
-        stage('Build') {
+    stage('Build') {
                agent   {docker {image 'ubuntu'}
          }
          steps {
