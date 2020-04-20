@@ -31,8 +31,8 @@ pipeline {
                     }    
         }
     stage('Build') {
-               agent   {docker {image 'ubuntu'}
-         }
+              
+         
          steps {
            
             sh "uname -a"
