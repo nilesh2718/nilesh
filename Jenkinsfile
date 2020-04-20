@@ -7,8 +7,9 @@ pipeline {
     stage("Env Variables") {
             steps {
               echo 'Testing environment veriables'
+              sh 'echo "I can access $BUILD_NUMBER in shell command as well."'
 
-                sh 'echo"$BUILD_NUMBER"'
+               // sh 'echo"$BUILD_NUMBER"'
             }
         }
     stage('Input step') {
