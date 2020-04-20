@@ -8,7 +8,7 @@ pipeline {
             steps {
               echo 'Testing environment veriables'
 
-                sh "$BUILD_NUMBER"
+                sh 'echo"$BUILD_NUMBER"'
             }
         }
     stage('Input step') {
